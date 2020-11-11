@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<!--idea逆向工程文献：https://blog.csdn.net/qq_34197553/article/details/77745773-->
+<generatorConfiguration>
+
+    <classPathEntry location="D:\Development\Repositry\mysql\mysql-connector-java\8.0.22\mysql-connector-java-8.0.22.jar" />
+    <context id="personhealth" >
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://127.0.0.1:3306/health?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai"
+                userId="root"
+                password="142567896" />
+        <javaModelGenerator targetPackage="com.etc.entity" targetProject="src/main/java" />
+        <sqlMapGenerator targetPackage="com.etc.mapper" targetProject="src/main/resources" />
+        <javaClientGenerator targetPackage="com.etc.dao" targetProject="src/main/java" type="XMLMAPPER" />
+        <!-- type有三个值：ANNOTATEDMAPPER、MIXEDMAPPER、XMLMAPPER -->
+        <!--  数据库　表名　生成名domainObjectName="" -->
+       <!-- <table schema="personhealth" tableName="advice">
+            <generatedKey column="advid" sqlStatement="mysql" identity="true" />
+        </table>-->
+        <table schema="personhealth" tableName="myuser">
+            <generatedKey column="uid" sqlStatement="mysql" identity="true" />
+        </table>
+        <!--<table schema="personhealth" tableName="order">
+            <generatedKey column="oid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="bodydata">
+            <generatedKey column="bid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="hertrate">
+            <generatedKey column="hid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="bloodsugar">
+            <generatedKey column="bid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="notice">
+            <generatedKey column="nid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="fitness">
+            <generatedKey column="fid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="sleep">
+            <generatedKey column="sid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="vip">
+            <generatedKey column="vid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="myadvice">
+            <generatedKey column="myadvid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="bloodpress">
+            <generatedKey column="bpid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="analysis">
+            <generatedKey column="aid" sqlStatement="mysql" identity="true" />
+        </table>
+        <table schema="personhealth" tableName="message">
+            <generatedKey column="mid" sqlStatement="mysql" identity="true" />
+        </table>-->
+    </context>
+</generatorConfiguration>
